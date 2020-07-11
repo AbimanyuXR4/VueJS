@@ -10,7 +10,7 @@
 
             <ul class="list-unstyled">
                 <li><a href="#"> Add New Customer</a></li>
-                <li><a href="#"> All Customers</a></li>
+                <li><router-link to="/siswas">SISWAAAAAAA</router-link></li>
                 <li><a href="#"> Logout</a>
                     <form id="logout-form" action="#" method="POST" style="display: none;">
                         @csrf
@@ -35,6 +35,25 @@
 
 <script>
 export default {
-    name: "App"
+    name: "App",
+
+    props: ['user'],
+
+    created(){
+        window.axios.interceptors.request.use(
+            (config)=>{
+                if(config.method === "get"){
+                    config.url = config.url + '?api_token=' +this.user.api_token;
+                }
+                else{
+                    config.data = {
+                        ...config.data,
+                        api_token: this.user.api_token
+                    };
+                }
+                return config;
+            }
+        )
+    }
 }
 </script>
