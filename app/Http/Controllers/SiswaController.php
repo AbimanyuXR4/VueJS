@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Siswa;
+use App\Http\Requests\SiswaRequest;
 
 class SiswaController extends Controller
 {
@@ -38,17 +39,9 @@ class SiswaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SiswaRequest $request)
     {
-        $data = $request->validate([
-            'user_id' => 'required',
-            'name' => 'required',
-            'email' => 'required',
-            'telephone' => 'required',
-            'address' => 'required',
-        ]);
-
-        $siswa = Siswa::create($data);
+        $siswa = Siswa::create($request->validated());
 
         return response()->json([
             'message' => "Siswa Berhasil Ditambahkan",
@@ -88,17 +81,9 @@ class SiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Siswa $siswa)
+    public function update(SiswaRequest $request, Siswa $siswa)
     {
-        $data = $request->validate([
-            'user_id' => 'required',
-            'name' => 'required',
-            'email' => 'required',
-            'telephone' => 'required',
-            'address' => 'required',
-        ]);
-
-        $siswa->update($data);
+        $siswa->update($request->validated());
 
         return response()->json([
             'message' => "Siswa Berhasil Diubah",
