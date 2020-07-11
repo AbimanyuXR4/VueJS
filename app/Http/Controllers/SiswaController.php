@@ -62,9 +62,12 @@ class SiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Siswa $siswa)
     {
-        //
+        return response()->json([
+            'message' => "Show Siswa",
+            'data' => $siswa
+        ]);
     }
 
     /**
@@ -85,9 +88,22 @@ class SiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Siswa $siswa)
     {
-        //
+        $data = $request->validate([
+            'user_id' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'telephone' => 'required',
+            'address' => 'required',
+        ]);
+
+        $siswa->update($data);
+
+        return response()->json([
+            'message' => "Siswa Berhasil Diubah",
+            'data' => $siswa,
+        ], 200);
     }
 
     /**
@@ -96,8 +112,12 @@ class SiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Siswa $siswa)
     {
-        //
+        $siswa->delete();
+
+        return response()->json([
+            'message' => "Siswa berhasil dihapus",
+        ],200);
     }
 }
