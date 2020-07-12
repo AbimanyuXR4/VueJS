@@ -9,7 +9,7 @@
             </div>
 
             <ul class="list-unstyled">
-                <li><a href="#"> Add New Customer</a></li>
+                <li><router-link to="/siswas/create">Add New Customer</router-link></li>
                 <li><router-link to="/siswas">SISWAAAAAAA</router-link></li>
                 <li><a href="#"> Logout</a>
                     <form id="logout-form" action="#" method="POST" style="display: none;">

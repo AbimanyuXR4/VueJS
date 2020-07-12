@@ -41,7 +41,7 @@ class SiswaController extends Controller
      */
     public function store(SiswaRequest $request)
     {
-        $siswa = Siswa::create($request->validated());
+        $siswa = $request->user()->siswas()->create($request->validated());
 
         return response()->json([
             'message' => "Siswa Berhasil Ditambahkan",
