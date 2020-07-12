@@ -2042,6 +2042,66 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/SiswaDetail.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/SiswaDetail.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "SiswaDetail",
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/api/siswas/' + this.$route.params.id).then(function (response) {
+      _this.siswa = response.data.data;
+      _this.loading = false;
+    })["catch"](function (error) {});
+  },
+  data: function data() {
+    return {
+      siswa: null,
+      loading: true
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/SiswaForm.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/SiswaForm.vue?vue&type=script&lang=js& ***!
@@ -37947,6 +38007,119 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/SiswaDetail.vue?vue&type=template&id=0a3b116e&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/SiswaDetail.vue?vue&type=template&id=0a3b116e& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return !_vm.loading
+    ? _c("div", [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-4" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "btn rounded border text-white bg-primary align-center",
+                staticStyle: { height: "40px", width: "40px" }
+              },
+              [_c("center", [_vm._v("Ap")])],
+              1
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "d-inline" }, [
+              _vm._v(" " + _vm._s(_vm.siswa.name) + " ")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "p",
+              {
+                staticClass:
+                  "text-uppercase text-secondary font-weight-bold pt-4 mb-2"
+              },
+              [_vm._v("Email")]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-info" }, [
+              _vm._v(" " + _vm._s(_vm.siswa.email) + " ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass:
+                  "text-uppercase text-secondary font-weight-bold pt-4 mb-2"
+              },
+              [_vm._v("Telephone")]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-info" }, [
+              _vm._v(" " + _vm._s(_vm.siswa.telephone) + " ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass:
+                  "text-uppercase text-secondary font-weight-bold pt-4 mb-2"
+              },
+              [_vm._v("Address")]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-info" }, [
+              _vm._v(" " + _vm._s(_vm.siswa.address) + " ")
+            ])
+          ])
+        ])
+      ])
+    : _vm._e()
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("a", { staticClass: "btn btn-dark", attrs: { href: "#" } }, [
+          _vm._v("Back")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("a", { staticClass: "btn btn-warning", attrs: { href: "#" } }, [
+          _vm._v("Edit")
+        ]),
+        _vm._v(" "),
+        _c("a", { staticClass: "btn btn-danger", attrs: { href: "#" } }, [
+          _vm._v("Delete")
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/SiswaForm.vue?vue&type=template&id=258cb23c&":
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/SiswaForm.vue?vue&type=template&id=258cb23c& ***!
@@ -38217,7 +38390,7 @@ var render = function() {
               {
                 staticClass:
                   "d-flex border-bottom border-secondary p-2 text-decoration-none",
-                attrs: { to: "/siswas/ + siswa.id" }
+                attrs: { to: "/siswas/" + siswa.id }
               },
               [
                 _c("li", { staticClass: "list-group-item border-0" }, [
@@ -53685,6 +53858,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ExampleComponent */ "./resources/js/components/ExampleComponent.vue");
 /* harmony import */ var _views_SiswaIndex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/SiswaIndex */ "./resources/js/views/SiswaIndex.vue");
 /* harmony import */ var _views_SiswaCreate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/SiswaCreate */ "./resources/js/views/SiswaCreate.vue");
+/* harmony import */ var _views_SiswaDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/SiswaDetail */ "./resources/js/views/SiswaDetail.vue");
+
 
 
 
@@ -53701,6 +53876,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/siswas/create',
     component: _views_SiswaCreate__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }, {
+    path: '/siswas/:id',
+    component: _views_SiswaDetail__WEBPACK_IMPORTED_MODULE_5__["default"]
   }],
   mode: 'history'
 }));
@@ -53771,6 +53949,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaCreate_vue_vue_type_template_id_eb789b18___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaCreate_vue_vue_type_template_id_eb789b18___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/SiswaDetail.vue":
+/*!********************************************!*\
+  !*** ./resources/js/views/SiswaDetail.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SiswaDetail_vue_vue_type_template_id_0a3b116e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SiswaDetail.vue?vue&type=template&id=0a3b116e& */ "./resources/js/views/SiswaDetail.vue?vue&type=template&id=0a3b116e&");
+/* harmony import */ var _SiswaDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SiswaDetail.vue?vue&type=script&lang=js& */ "./resources/js/views/SiswaDetail.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SiswaDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SiswaDetail_vue_vue_type_template_id_0a3b116e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SiswaDetail_vue_vue_type_template_id_0a3b116e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/SiswaDetail.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/SiswaDetail.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/views/SiswaDetail.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./SiswaDetail.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/SiswaDetail.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/SiswaDetail.vue?vue&type=template&id=0a3b116e&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/views/SiswaDetail.vue?vue&type=template&id=0a3b116e& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaDetail_vue_vue_type_template_id_0a3b116e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./SiswaDetail.vue?vue&type=template&id=0a3b116e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/SiswaDetail.vue?vue&type=template&id=0a3b116e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaDetail_vue_vue_type_template_id_0a3b116e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SiswaDetail_vue_vue_type_template_id_0a3b116e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
